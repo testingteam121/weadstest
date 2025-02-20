@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Ads</title>
+    <script src="https://webglads.unityads.unity3d.com/webglads.js"></script>
+</head>
+<body>
+    <script>
+        var gameId = "4789541";
+        var placementId = "video";
+        var testMode = true;
+
+        function showAd() {
+            if (typeof unityads !== "undefined" && unityads.isReady(placementId)) {
+                unityads.show(placementId);
+            } else {
+                console.log("Ad not ready");
+            }
+        }
+    </script>
+    <button onclick="showAd()">Show Ad</button>
+</body>
+</html>
